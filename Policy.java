@@ -1,13 +1,13 @@
-import java.util.Scanner;
-
 public class Policy //Policy class that will model an insurance policy for one person
 {
+   //instance fields
    private int policyNum;
    private String providerName, firstName, lastName;
    private int age;
    private String smokingStatus;
    private double height; // in inches
    private double weight; // in pounds
+   
    public Policy() //no-arg constructor (set default values for all fields)
    {
       policyNum = 0;
@@ -15,29 +15,29 @@ public class Policy //Policy class that will model an insurance policy for one p
       firstName = "";
       lastName = "";
       age = 0;
-      smokingStatus = "";
+      smokingStatus = "non-smoker";
       height = 0.0;
       weight = 0.0;
    }
-   public Policy(int policyNum, String providerName, String firstName, String lastName, int age, String smokingStatus, double height, double weight) //constructor that accepts arguments
+   public Policy(int pNum, String provName, String fName, String lName, int pAge, String smokeStatus, double pHeight, double pWeight) //constructor that accepts arguments
    {
-      policyNum = policyNum;
-      providerName = providerName;
-      firstName = firstName;
-      lastName = lastName;
-      age = age;
-      smokingStatus = smokingStatus;
-      height = height;
-      weight = weight;
+      policyNum = pNum;
+      providerName = provName;
+      firstName = fName;
+      lastName = lName;
+      age = pAge;
+      smokingStatus = smokeStatus;
+      height = pHeight;
+      weight = pWeight;
    }
    
    /**
    Sets the policy number
-   @param policyNum the policy number
+   @param p the policy number
    */
-   public void setPolicyNum(int policyNum) // setter/mutator method
+   public void setPolicyNum(int p) // setter/mutator method
    {
-      policyNum = policyNum;
+      policyNum = p;
    }
    
    /**
@@ -50,11 +50,11 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Sets the provider's name
-   @param providerName
+   @param pn the provider's name
    */
-   public void setProviderName(String providerName)
+   public void setProviderName(String pn)
    {
-      providerName = providerName;
+      providerName = pn;
    }
    
    /**
@@ -67,11 +67,11 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Sets the Policyholder’s First Name
-   @param firstName 
+   @param fn the Policyholder’s First Name
    */
-   public void setFirstName(String firstName)
+   public void setFirstName(String fn)
    {
-      firstName = firstName;
+      firstName = fn;
    }
    
    /**
@@ -84,11 +84,11 @@ public class Policy //Policy class that will model an insurance policy for one p
 
    /**
    Sets the Policyholder’s Last Name
-   @param lastName 
+   @param ln the Policyholder’s Last Name
    */
-   public void setLastName(String lastName)
+   public void setLastName(String ln)
    {
-      lastName = lastName;
+      lastName = ln;
    }
    
    /**
@@ -101,11 +101,11 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Sets the Policyholder’s Age
-   @param age 
+   @param a the Policyholder’s Age
    */
-   public void setAge(int age)
+   public void setAge(int a)
    {
-      age = age;
+      age = a;
    }
    
    /**
@@ -118,11 +118,11 @@ public class Policy //Policy class that will model an insurance policy for one p
 
    /**
    Sets the Policyholder’s Smoking Status
-   @param smokingStatus 
+   @param s the Policyholder’s Smoking Status
    */
-   public void setSmokingStatus(String smokingStatus)
+   public void setSmokingStatus(String s)
    {
-      smokingStatus = smokingStatus;
+      smokingStatus = s;
    }
    
    /**
@@ -135,11 +135,11 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Sets the Policyholder’s Height (in inches)
-   @param height 
+   @param h the Policyholder’s Height
    */
-   public void setHeight(double height)
+   public void setHeight(double h)
    {
-      height = height;
+      height = h;
    }
    
    /**
@@ -152,11 +152,11 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Sets the Policyholder’s Weight (in pounds)
-   @param weight 
+   @param w the Policyholder’s Weight
    */
-   public void setWeight(double weight)
+   public void setWeight(double w)
    {
-      weight = weight;
+      weight = w;
    }
    
    /**
