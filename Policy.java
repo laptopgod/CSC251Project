@@ -42,6 +42,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the policy number
+   @return The policy number
    */
    public int getPolicyNum() // getter/accessor method
    {
@@ -59,6 +60,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the provider's name
+   @return The provider's name
    */
    public String getProviderName()
    {
@@ -76,6 +78,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the Policyholder’s First Name
+   @return The Policyholder’s First Name
    */
    public String getFirstName()
    {
@@ -93,6 +96,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the Policyholder’s Last Name
+   @return The Policyholder’s Last Name
    */
    public String getLastName()
    {
@@ -110,6 +114,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the Policyholder’s Age
+   @return The Policyholder’s Age
    */
    public int getAge()
    {
@@ -127,6 +132,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the Policyholder’s Smoking Status
+   @return The Policyholder’s Smoking Status
    */
    public String getSmokingStatus()
    {
@@ -144,6 +150,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the Policyholder’s Height (in inches)
+   @return The Policyholder’s Height
    */
    public double getHeight()
    {
@@ -161,6 +168,7 @@ public class Policy //Policy class that will model an insurance policy for one p
    
    /**
    Returns the Policyholder’s Weight (in pounds)
+   @return The Policyholder’s Weight
    */
    public double getWeight()
    {
