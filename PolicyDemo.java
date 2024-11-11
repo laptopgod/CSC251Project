@@ -45,6 +45,11 @@ public class PolicyDemo
          if(inputFile.hasNext())
             inputFile.nextLine();
             
+         // Create a PolicyHolder object
+         PolicyHolder policyHolder = new PolicyHolder(firstName, lastName, age, smokingStatus, height, weight);
+            
+         //create a Policy object and add it to our ArrayList
+         policyList.add(new Policy(policyNumber, providerName, policyHolder));
       
       }
       
@@ -52,10 +57,21 @@ public class PolicyDemo
       for(Policy policy : policyList)
       { 
          //display information about the Policy
+         //we can now access the data through the PolicyHolder object associated with each Policy object
          System.out.println("Policy Number: " + policy.getPolicyNumber());
          System.out.println("Provider Name: " + policy.getProviderName());
+         System.out.println("Policyholder's First Name: " + policy.getPolicyHolder().getFirstName());
+         System.out.println("Policyholder's Last Name: " + policy.getPolicyHolder().getLastName());
+         System.out.println("Policyholder's Age: " + policy.getPolicyHolder().getAge());
+         System.out.println("Policyholder's Smoking Status: " + policy.getPolicyHolder().getSmokingStatus());
+         System.out.println("Policyholder's Height: " + policy.getPolicyHolder().getHeight() + " inches");
+         System.out.println("Policyholder's Weight: " + policy.getPolicyHolder().getWeight() + " pounds");
+         System.out.printf("Policyholder's BMI: %.2f\n", policy.getPolicyHolder().getBMI());
          System.out.printf("Policy Price: $%.2f\n", policy.getPrice());
          System.out.println();
+         
+         if(policy.getPolicyHolder().getSmokingStatus().equalsIgnoreCase("smoker"))//keep track of the number of smokers
+            numSmokers++; //check the smoking status of the policyholder within the Policy object by accessing getPolicyHolder()
       }
       
       //print out the number of smokers and non-smokers
