@@ -83,4 +83,13 @@ public class Policy //Policy class that will model an insurance policy for one p
 
       return baseFee + additionalFee;
    }
+   
+   public String toString() 
+   {
+      return "Policy Number: " + policyNumber + "\n" +
+             "Provider Name: " + providerName + "\n" + 
+             policyHolder.toString() +
+             String.format("Policy Price: $%.2f\n", getPrice());
+   }
+   
 }
