@@ -92,4 +92,18 @@ public class Policy //Policy class that will model an insurance policy for one p
              String.format("Policy Price: $%.2f\n", getPrice());
    }
    
+   //Adding a Static Field to Track the Number of Policy Objects
+   private static int policyCount = 0;
+
+   public Policy() 
+   {
+      policyCount++;
+   }
+
+   public static int getPolicyCount() 
+   {
+      return policyCount;
+   }
+   
+   
 }
